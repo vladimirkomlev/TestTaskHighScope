@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+
+    <package name="user" namespace="/" extends="struts-default">
+        <interceptors>
+            <interceptor name="identificatorInterseptor" class="highball.interceptor.IdentificationInterceptor"/>
+            <interceptor-stack name="newStack">
+                <interceptor-ref name="identificatorInterseptor"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="newStack"/>
+
+        <action name="Login">
+            <interceptor-ref name="defaultStack"/>
+            <result>User/pages/login.jsp</result>
+        </action>
+        <action name="LoginAction" class="highball.action.LoginAction" method="execute">
+            <interceptor-ref name="defaultStack"/>
+            <result name="success" type="redirectAction">
+                <param name="actionName">Welcome</param>
+            </result>
+            <result name="login" type="redirectAction">
+                <param name="actionName">Login</param>
+            </result>
+        </action>
+        <action name="Welcome" class="highball.action.StartAction" method="display">
+            <result name="none">User/pages/start.jsp</result>
+            <result name="login" type="redirectAction">
+                <param name="actionName">Login</param>
+            </result>
+        </action>
+        <action name="ResultAction" class="highball.action.StartAction" method="execute">
+            <result name="success">User/pages/start.jsp</result>
+            <result name="login" type="redirectAction">
+                <param name="actionName">Login</param>
+            </result>
+        </action>
+    </package>
+
+</struts>
