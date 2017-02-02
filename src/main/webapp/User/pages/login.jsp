@@ -3,6 +3,8 @@
 <html>
 <head>
     <title>Login</title>
+    <script async src="/js/jquery-3.1.1.min.js"></script>
+    <script async src="/js/scriptjQuery.js"></script>
 </head>
 <body>
     <h3>Enter your login and password, please.</h3>

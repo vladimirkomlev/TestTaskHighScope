@@ -36,7 +36,7 @@
             </result>
         </action>
         <action name="ResultAction" class="highball.action.StartAction" method="execute">
-            <result name="success">User/pages/start.jsp</result>
+            <result name="success">User/pages/result.jsp</result>
             <result name="login" type="redirectAction">
                 <param name="actionName">Login</param>
             </result>

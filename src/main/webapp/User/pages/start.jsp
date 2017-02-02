@@ -6,6 +6,8 @@
 <html>
 <head>
     <title>Title</title>
+    <script async src="/js/jquery-3.1.1.min.js"></script>
+    <script async src="/js/scriptjQuery.js"></script>
 </head>
 <body>
     <s:form action="ResultAction">
@@ -15,7 +17,7 @@
                   id="selecedCountryId"/>
     </s:form>
     <br>
-    <s:submit id="resultId" value="Result"/>
+    <s:submit id="resultId" value="Result" align="left"/>
     <br>
     <div id="resultDiv"></div>
 </body>

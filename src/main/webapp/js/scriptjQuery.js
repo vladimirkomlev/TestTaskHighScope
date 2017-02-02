@@ -9,6 +9,6 @@ $(document).ready(function () {
             success: function (html) {
                 content.innerHTML=html;
             }
-        })
-    })
-})
+        });
+    });
+});
