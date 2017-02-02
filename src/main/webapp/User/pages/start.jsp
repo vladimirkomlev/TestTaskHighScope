@@ -11,15 +11,12 @@
     <s:form action="ResultAction">
         <s:select label="Select country "
                   list="listNamesCountries"
-                  name="selectedCountry"/>
-        <sq:submit tergets="leftDiv"
-                   value="Submit"
-                   button="true"/>
+                  name="selectedCountry"
+                  id="selecedCountryId"/>
     </s:form>
     <br>
-    <div id="leftDiv">
-        <s:include value="result.jsp"></s:include>
-    </div>
-
+    <s:submit id="resultId" value="Result"/>
+    <br>
+    <div id="resultDiv"></div>
 </body>
 </html>
